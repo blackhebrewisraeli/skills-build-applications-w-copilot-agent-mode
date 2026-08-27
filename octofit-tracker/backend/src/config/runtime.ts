@@ -1,5 +1,3 @@
-const codespaceName = process.env.CODESPACE_NAME;
+import { baseUrl } from '../server.js';
 
-export const apiBaseUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev`
-  : 'http://localhost:8000';
+export const apiBaseUrl = baseUrl;

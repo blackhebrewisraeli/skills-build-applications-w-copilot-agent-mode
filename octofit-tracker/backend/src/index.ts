@@ -1,6 +1,7 @@
 import express from 'express';
 import { connectDatabase } from './config/database.js';
 import { apiBaseUrl } from './config/runtime.js';
+import { port } from './server.js';
 import {
   ActivityModel,
   LeaderboardModel,
@@ -10,7 +11,6 @@ import {
 } from './models.js';
 
 const app = express();
-const port = Number(process.env.PORT) || 8000;
 
 app.use(express.json());
 
